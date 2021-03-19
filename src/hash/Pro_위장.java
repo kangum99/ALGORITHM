@@ -4,6 +4,7 @@ import java.util.*;
 public class Pro_위장 {
 //	https://programmers.co.kr/learn/courses/30/lessons/42578 -위장
 	/*
+	 * 해쉬
 	 * 서로 다른 옷의 조합 구하기
 	 1. yellow_hat
 	 2. blue_sunglasses
