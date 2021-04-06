@@ -14,10 +14,11 @@ public class Pro_완주하지못한선수 {
 //        해쉬맵에 {참가자 : 참가자 중복 수(동명이인 시 숫자++)}넣어주기
 		for(String s : participant) {
 //			참가자가 없는 경우 값을 넣어라
-//			getOrDefault을 사용하면 좋다 ->두줄을 한번에 hm.put(player, hm.getOrDefault(player, 0) + 1);
-        	map.putIfAbsent(s, 0);
-//        	그리고 0 -> 1로 한명이 있다는 의미 
-        	map.replace(s, map.get(s)+1);
+//			getOrDefault을 사용하면 좋다 ->두줄을 한번에 
+			map.put(s, map.getOrDefault(s, 0) + 1);
+//        	map.putIfAbsent(s, 0);
+////        	그리고 0 -> 1로 한명이 있다는 의미 
+//        	map.replace(s, map.get(s)+1);
         }
 //		완주자에 대한 value값--
         for(String s : completion) {

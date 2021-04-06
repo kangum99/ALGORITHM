@@ -10,7 +10,7 @@ public class Pro_크레인인형뽑기게임 {
 	 * 게임화면의 격자 상태가 담긴 2차원 배열 : board
 	 * 인형을 집기 위해 크레인을 작동시킨 위치가 담긴 배열 : moves
 	 * 크레인을 모두 작동시킨 후 터트려져 사라진 인형의 개수 return
-	 * 1:59 - 
+	 * 1:59 - 1: 52
 	 * */
 
 	static int solution(int[][] board, int[] moves) {
