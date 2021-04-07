@@ -1,4 +1,10 @@
 package bfsdfs;
+/*
+ * https://programmers.co.kr/learn/courses/30/lessons/43165
+ * level 2
+ * 사용할 수 있는 숫자 배열 : numbers
+ * 타겟넘버 : target
+ * 매개변수로 주어질 때 숫자를 적절히 더하고 빼서 타겟 넘버를 만드는 방법의 수를 return*/
 
 public class Pro_타겟넘버 {
     static int solution(int[] numbers, int target) {
