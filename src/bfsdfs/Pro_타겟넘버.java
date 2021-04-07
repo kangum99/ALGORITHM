@@ -6,9 +6,11 @@ public class Pro_타겟넘버 {
     }
     
     static int dfs(int[] numbers, int target, int index, int num) {
+//    	재귀를 나갈 조건
     	if(index == numbers.length)
     		return num == target ? 1 : 0;
     	else
+//    		+연산과 -연산을 해주고 갖은 return값을 더한다
     		return dfs(numbers, target, index + 1, num + numbers[index])
     				+ dfs(numbers, target, index + 1, num - numbers[index]);
     }
