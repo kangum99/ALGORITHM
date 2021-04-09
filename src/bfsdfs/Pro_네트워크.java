@@ -9,11 +9,30 @@ package bfsdfs;
  * */
 
 public class Pro_네트워크 {
+	static boolean[] visit; 
 	static int solution(int n, int[][] computers) {
         int answer = 0;
-//        for(int i = 0; i < )
+        visit = new boolean[n]; 
+        for (int i = 0; i < n; i++) {
+//          방문안된 노드들만
+        	if(!visit[i]) {
+//        		이어지는 노드들을 visit=true로 바꿈
+        		dfs(i, computers, n);
+//        		네트워크 하나 생성
+        		answer++;
+        	}
+        }
         return answer;
     }
+	static void dfs(int node, int[][] arr, int n) {
+		visit[node] = true;
+		for(int i = 0; i < n; i++) {
+//			방문을 안했고 arr값이 1인 경우
+			if(visit[i] == false && arr[node][i] == 1) {
+				dfs(i, arr, n);
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
