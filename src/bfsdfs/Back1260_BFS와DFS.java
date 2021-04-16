@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 //- 노드2에 연결된 노드들을 모두 보고 싶다 → 인접리스트
 //- 노드2와 노드3이 연결되어있는지 확인하고 싶다 → 인접행렬
 
-public class Back1260_BfsDfs {
+public class Back1260_BFS와DFS {
 	
 	private static int N, M, V;
 //	private static int[][] arr;

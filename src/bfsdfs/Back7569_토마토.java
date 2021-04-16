@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 //https://www.acmicpc.net/problem/7569-토마토(BFS)
 
-public class Back7569_BFS {
+public class Back7569_토마토{
 
 	static int[][][] arr;
 	static int M, N, H, day, count;

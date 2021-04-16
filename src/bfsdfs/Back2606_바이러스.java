@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/2606 BFS, DFS (바이러스)
 
-public class Back2606_BfsDfs {
+public class Back2606_바이러스 {
 	
 	static int n, m, cnt = 0;
 	static int[][] arr;

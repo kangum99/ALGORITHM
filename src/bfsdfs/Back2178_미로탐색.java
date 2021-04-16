@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 //https://www.acmicpc.net/problem/2178 BFS(미로탐색- 최단 거리 탐색)
 
-public class Back2178_BFS {
+public class Back2178_미로탐색 {
 	
 	static int[][] arr;
 	static int N, M;
