@@ -1,4 +1,4 @@
-package algorithm;
+package greedy;
 
 public class Pro_2016년 {
 	/*
