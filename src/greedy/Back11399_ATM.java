@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 //https://www.acmicpc.net/problem/11399 ATM기 (그리디 알고리즘)
 
-public class Back11399_Greedy {
+public class Back11399_ATM {
 	private static int num, sumTime=0, result = 0;
 	private static int[] time;
 
