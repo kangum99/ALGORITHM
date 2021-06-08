@@ -10,7 +10,7 @@ public class Back16991_외판원순회3 {
 	static int[][] arr;
 //	dp[현재 도시 위치][방문조합을 비트 마스크]
 	static double[][] dp;
-	static int MAX = 32000;
+	static int MAX = 100000;
 	
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
@@ -53,8 +53,8 @@ public class Back16991_외판원순회3 {
 //			현재 방문한 도시들 | i번째 방문할 도시
 			int next = visited | (1<<i);
 
-//			i번 째 방문할 도시 == 현재도시 || 지금까지 방문했던 도시 중에 있다면 
-			if(i == current || (visited & (1<<i)) != 0) continue;
+//			지금까지 방문했던 도시 중에 있다면 
+			if((visited & (1<<i)) != 0) continue;
 
 //			Top-down 방식.(결국에는 [0][1]에 들어있는 게 답) 
 //			ex) 0->1 과 0->2(0->1->2) 중에 작은것
