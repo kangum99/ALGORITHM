@@ -39,14 +39,13 @@ public class Back16991_외판원순회3 {
 	
 //	현재도시, 지금까지 방문했던 도시(비트마스킹)
 	static double TSP (int current, int visited) {
-		double here = dp[current][visited];
 
 //		모든 도시를 다 방문 했을 경우 here에 처음위치(0)까지의 거리를 넣어주면 된다.
-		if(visited == ((1<<N)-1)) return here = dist(current, 0);
+		if(visited == ((1<<N)-1)) return dp[current][visited] = dist(current, 0);
 
 //		here가 MAX가 아니라는 것은 이미 한번 왔던 것. 
 //		=> 굳이 한번 더 구할 필요X 값을 그대로 가져다 쓰기
-		if(here != MAX) return here;
+		if(dp[current][visited] != MAX) return dp[current][visited];
 		
 		
 		for(int i = 0; i < N; i++) {
@@ -58,10 +57,10 @@ public class Back16991_외판원순회3 {
 
 //			Top-down 방식.(결국에는 [0][1]에 들어있는 게 답) 
 //			ex) 0->1 과 0->2(0->1->2) 중에 작은것
-			here = Math.min(here, TSP(i, next) + dist(i, current));
+			dp[current][visited] = Math.min(dp[current][visited], TSP(i, next) + dist(i, current));
 		}
 		
-		return here;
+		return dp[current][visited];
 	}
 	
 //	거리구하는 함수
