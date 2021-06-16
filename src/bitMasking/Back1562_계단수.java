@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 
 public class Back1562_계단수 {
 	static int n, mod = 1000000000, visit = 1<<10;
+//	[몇자리 숫자][끝나는 숫자][포함되는 숫자들]
 	static long dp[][][] = new long[101][10][visit];
 	
 	public static void main(String[] args) throws Exception{
@@ -13,6 +14,8 @@ public class Back1562_계단수 {
 		n = Integer.parseInt(br.readLine());
 		System.out.println(cal());
 	}
+	
+//	끝자리 수 가 0또는 9인 경우는 1또는 8만 가능
 	
 	public static long cal() {
 		long sum=0;
@@ -34,6 +37,7 @@ public class Back1562_계단수 {
 			}
 		}
 		
+//		0-9모두 사용한 것
 		for (i = 0; i < 10; i++) { 
 			sum = (sum + dp[n][i][visit-1])%mod;
 		}
